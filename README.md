@@ -59,8 +59,8 @@ Countries analyzed: **United States**, **India**, **Kenya**
 
 1. Clone the repo:
    ```bash
-    git clone https://github.com/YOUR_USERNAME/Covid-Data-Tracker.git
-    cd Covid-Data-Tracker
+    git clone https://github.com/KabeloMatlakala/Week-8-Python-Covid19-Data-Tracker.git
+    cd Week-8-Python-Covid19-Data-Tracker
    ```
 2. (Optional but recommended) Create and activate a virtual environment:
     ```bash
@@ -84,8 +84,19 @@ Countries analyzed: **United States**, **India**, **Kenya**
 
 ## 📌 Data Source
 
-Data used: [Our World in Data – COVID-19 Data](https://ourworldindata.org/coronavirus)
+Data used: [Our World in Data – COVID-19 Data](https://ourworldindata.org/coronavirus)  
+- Dataset: `owid-covid-data.csv.zip` (included in this repo for convenience)  
+- Original download: [owid-covid-data.csv](https://covid.ourworldindata.org/data/owid-covid-data.csv)
 
-- Downloadable CSV: [owid-covid-data.csv](https://covid.ourworldindata.org/data/owid-covid-data.csv)
-- Maintained by the Our World in Data team
+### 🗜️ How to Use the Zip File
+
+If you clone the repo and want to extract the dataset:
+
+```python
+     import zipfile
+     
+     with zipfile.ZipFile("owid-covid-data.csv.zip", "r") as zip_ref:
+         zip_ref.extractall()
+```
+
 
