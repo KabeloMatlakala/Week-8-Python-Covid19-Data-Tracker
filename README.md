@@ -4,7 +4,7 @@ This project is a data analysis notebook that explores global COVID-19 trends ov
 
 ---
 
-## 📌 Project Goals
+## Project Goals
 
 - Import and clean global COVID-19 data
 - Analyze trends in cases, deaths, and vaccinations
@@ -47,15 +47,15 @@ Covid-Data-Tracker/
 
 ## 📊 Sample Analyses
 
-- 📈 Total and daily new cases over time
-- 💀 Total deaths and death rate by country
-- 💉 Vaccination rollout and % of population vaccinated
+-  Total and daily new cases over time
+-  Total deaths and death rate by country
+-  Vaccination rollout and % of population vaccinated
 
 Countries analyzed: **United States**, **India**, **Kenya**
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repo:
    ```bash
@@ -82,21 +82,27 @@ Countries analyzed: **United States**, **India**, **Kenya**
         jupyter notebook
     ```
 
-## 📌 Data Source
+## Data Source
 
 Data used: [Our World in Data – COVID-19 Data](https://ourworldindata.org/coronavirus)  
-- Dataset: `owid-covid-data.csv.zip` (included in this repo for convenience)  
-- Original download: [owid-covid-data.csv](https://covid.ourworldindata.org/data/owid-covid-data.csv)
+- Included file: `owid-covid-data.csv.zip` (compressed for size)
+- Original uncompressed dataset: [owid-covid-data.csv](https://covid.ourworldindata.org/data/owid-covid-data.csv)
 
-### 🗜️ How to Use the Zip File
+### How to Use the Zip File
 
-If you clone the repo and want to extract the dataset:
+After cloning this repo:
+
+1. **Manually extract** `owid-covid-data.csv.zip` using your system’s unzip tool (right-click → Extract).
+2. Place the extracted file `owid-covid-data.csv` in the project root (same folder as the notebook).
+3. Then run the notebook.
+
+Alternatively, you can extract it with Python:
 
 ```python
-     import zipfile
-     
-     with zipfile.ZipFile("owid-covid-data.csv.zip", "r") as zip_ref:
-         zip_ref.extractall()
+import zipfile
+
+with zipfile.ZipFile("owid-covid-data.csv.zip", "r") as zip_ref:
+    zip_ref.extractall()
 ```
 
 
